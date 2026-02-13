@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amanokrom Gyaseman Palace</title>
+<link rel="stylesheet" href="style.css">
+<style>
+    /* HEADER STYLE */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: 0.3s ease;
+    background: transparent;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+}
+
+.logo {
+    font-weight: bold;
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    position: relative;
+    padding-bottom: 5px;
+    transition: 0.3s;
+}
+
+/* Underline Effect */
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: gold;
+    left: 0;
+    bottom: 0;
+    transition: 0.3s;
+}
+
+/* On Hover */
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
+}
+
+/* SCROLL BACKGROUND */
+header.scrolled {
+    background: #101010;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.gallery-preview {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: 0.5s ease;
+}
+
+.gallery-overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    color: white;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.center-btn {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.btn {
+    background: #800000;
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: gold;
+    color: black;
+}
+
+.card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.card {
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.15);
+}
+
+.sub-title {
+    text-align: center;
+    padding: 70px 0 40px;
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* Hamburger hidden on desktop */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: #101010;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px 5%;
+        display: none;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+}
+
+
+
+</style>
+</head>
+<body>
+<!-- LIGHTBOX -->
+<div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img">
+</div>
+
+ 
+
+<header id="header">
+    <nav class="navbar">
+        <div class="logo">Amanokrom Gyaseman Palace</div>
+        <div class="menu-toggle" id="menu-toggle">
+        ☰
+    </div>
+        <ul class="nav-links">
+            <li><a href="#home" class="nav-link active">Home</a></li>
+            <li><a href="history.html" class="nav-link">History</a></li>
+            <li><a href="#culture" class="nav-link">Culture</a></li>
+            <li><a href="#leadership" class="nav-link">Leadership</a></li>
+            <li><a href="#gallery" class="nav-link">Gallery</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+<!-- HERO SECTION WITH CAROUSEL -->
+<section id="home" class="hero">
+    <div class="overlay"></div>
+    <div class="carousel">
+        <img src="asset/img/image20.jpeg" class="slide active">
+        <img src="asset/img/image14.jpeg" class="slide">
+        <img src="asset/img/image-7.jpeg" class="slide">
+    </div>
+    <div class="hero-text">
+        <h1>Welcome to Amanokrom Gyaseman</h1>
+        <p>Preserving Heritage • Celebrating Tradition • Inspiring Unity</p>
+    </div>
+</section>
+
+<!-- HISTORY SECTION -->
+<section id="history" class="section">
+    <h2>History of the Palace</h2>
+    <div class="two-column">
+        <img src="asset/img/young-drummer.jpg">
+        <div>
+            <p>
+                Wo pe Ko! Wo pe Ko! Wo pe Ko!
+Oko ye me Adedade!
+(Meaning -You are belligerent! You are 
+belligerent! You are belligerent!
+Gyasehene Abentia (Hon)
+The panegyric is attributed to the early 
+forebears of Amanokrom for their 
+characteristic boldness, skill in war and 
+dedication to the cause of justice. It symbolizes 
+the kind of spirit and drive which inspired 
+successive bands of war lords and their 
+lieutenants on their forward march from the far 
+interior in Ashanti to their final destination, 
+the present Akuapem Ridge.
+Amanokrom one of the principal Twi speaking 
+towns in Akuapem was established around 
+1742 by Nana Amanor Awuah by Asona clan 
+whose predecessors accompanied their 
+relative, King Safori, to establish the Ofore 
+stool dynasty and the Akuapem State after the 
+Akuapem War of Independence against the 
+Akwamus in 1733.
+Nana Amanor Awuah whose name was given to 
+the new town Amanokrom (Amanor's Town) 
+was a descendant of Nana Ahenkorakese, an 
+Asona Chief of Adanse Ofoase in Ashanti 
+and of common ancestry with King 
+Kuntunkununku.
+ 
+            </p>
+         
+            <div class="read-more-wrapper">
+    <a href="history.html" class="read-more-btn">
+        Read More
+        <span class="arrow">→</span>
+    </a>
+</div>
+
+        </div>
+    </div>
+</section>
+
+<!-- CULTURE SECTION -->
+<section id="culture" class="section bg-light">
+    <h2>Culture & Traditions</h2>
+    <div class="card-grid">
+        <div class="card">
+            <img src="asset/img/image50.jpeg">
+            <h3>Festivals</h3>
+            <p>Annual festivals celebrate ancestry, unity, and gratitude.</p>
+        </div>
+        <div class="card">
+            <img src="asset/img/image39.jpeg">
+            <h3>Traditional Music</h3>
+            <p>Drumming and dance connect generations through storytelling.</p>
+        </div>
+        <div class="card">
+            <img src="asset/img/image-11.jpeg">
+            <h3>Royal Regalia</h3>
+            <p>Symbols of authority and sacred heritage of the royal lineage.</p>
+        </div>
+    </div>
+</section>
+ 
+<!-- LEADERSHIP SECTION -->
+<section id="leadership" class="section">
+    <h2>Royal Leadership</h2>
+
+    <div class="card-grid">
+
+        <a href="chief.html" class="card-link">
+            <div class="card">
+                <img src="images/chief.jpg">
+                <h3>The Chief</h3>
+                <p>The custodian of tradition and head of the Amanokrom people.</p>
+            </div>
+        </a>
+
+        <a href="chief.html" class="card-link">
+            <div class="card">
+                <img src="images/queenmother.jpg">
+                <h3>The Queenmother</h3>
+                <p>Advisor and spiritual guide, protector of women and youth.</p>
+            </div>
+        </a>
+
+    </div>
+
+    <h3 class="sub-title">Subchiefs</h3>
+
+    <div class="card-grid">
+
+        <a href="chief.html" class="card-link">
+            <div class="card">
+                <img src="asset/img/image27.jpeg">
+                <h3>Gyaseman Subchief</h3>
+                <p>Supports the chief in administrative and traditional matters.</p>
+            </div>
+        </a>
+
+        <a href="chief.html" class="card-link">
+            <div class="card">
+                <img src="asset/img/image34.jpeg">
+                <h3>Krontihene</h3>
+                <p>Oversees internal security and traditional ceremonies.</p>
+            </div>
+        </a>
+
+        <a href="chief.html" class="card-link">
+            <div class="card">
+                <img src="asset/img/image-7.jpeg">
+                <h3>Nifahene</h3>
+                <p>Leader responsible for defense and community protection.</p>
+            </div>
+        </a>
+
+    </div>
+</section>
+
+ 
+<!-- GALLERY SECTION (HOME PREVIEW) -->
+<section id="gallery" class="section bg-light">
+    <h2>Royal Gallery</h2>
+
+    <div class="gallery-preview">
+
+        <div class="gallery-item">
+            <img src="asset/img/image40.jpeg">
+            <div class="gallery-overlay">
+                <h3>Odwira Festival</h3>
+                <p>Annual celebration of heritage and thanksgiving.</p>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="asset/img/image41.jpeg">
+            <div class="gallery-overlay">
+                <h3>Royal Address</h3>
+                <p>His Majesty addressing the community.</p>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="asset/img/image42.jpeg">
+            <div class="gallery-overlay">
+                <h3>Traditional Drumming</h3>
+                <p>Preserving cultural rhythm and identity.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="center-btn">
+        <a href="gallery.html" class="btn">View Full Gallery</a>
+    </div>
+
+</section>
+
+
+ <!-- ================= FOOTER ================= -->
+<footer class="palace-footer">
+
+    <div class="footer-container">
+
+        <!-- LEFT: LOGO -->
+        <div class="footer-logo">
+            <img src="asset/img/logo.png" alt="Palace Logo">
+        </div>
+
+        <!-- CENTER: LINKS -->
+        <div class="footer-links">
+            <h3>Navigation</h3>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#history">History</a></li>
+                <li><a href="#culture">Culture</a></li>
+                <li><a href="#leadership">Leadership</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+            </ul>
+        </div>
+
+        <!-- RIGHT: NEWS / INSTAGRAM STYLE -->
+        <div class="footer-news">
+            <h3>Latest News</h3>
+
+            <div class="news-item">
+                <img src="asset/img/fes.jpeg" alt="">
+                <div>
+                    <p class="news-date">January 7, 2026</p>
+                    <p class="news-title">Odwira Festival Celebration</p>
+                </div>
+            </div>
+
+            <div class="news-item">
+                <img src="asset/img/NANA OSIM.jpeg" alt="">
+                <div>
+                    <p class="news-date">December 20, 2025</p>
+                    <p class="news-title">Community Development Address</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- COPYRIGHT -->
+    <div class="footer-bottom">
+        © 2026 Amanokrom Gyaseman Palace | All Rights Reserved
+    </div>
+
+</footer>
+
+
+<script  >
+    let slides = document.querySelectorAll(".slide");
+let index = 0;
+
+function nextSlide() {
+    slides[index].classList.remove("active");
+    index = (index + 1) % slides.length;
+    slides[index].classList.add("active");
+}
+
+setInterval(nextSlide, 4000);
+
+// Navbar Background on Scroll
+const header = document.getElementById("header");
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".nav-link");
+
+window.addEventListener("scroll", () => {
+
+    // Change navbar background
+    if (window.scrollY > 50) {
+        header.classList.add("scrolled");
+    } else {
+        header.classList.remove("scrolled");
+    }
+
+    // Active link on scroll
+    let current = "";
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop - 100;
+        const sectionHeight = section.clientHeight;
+
+        if (pageYOffset >= sectionTop &&
+            pageYOffset < sectionTop + sectionHeight) {
+            current = section.getAttribute("id");
+        }
+    });
+
+    navLinks.forEach(link => {
+        link.classList.remove("active");
+        if (link.getAttribute("href").includes(current)) {
+            link.classList.add("active");
+        }
+    });
+});
+
+// Hamburger Toggle
+const menuToggle = document.getElementById("menu-toggle");
+const navLinksContainer = document.getElementById("nav-links");
+
+menuToggle.addEventListener("click", () => {
+    navLinksContainer.classList.toggle("show");
+});
+
+
+
+</script>
+</body>
+</html>

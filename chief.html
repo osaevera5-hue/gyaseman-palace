@@ -1,0 +1,306 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gyaseman Subchief | Amanokrom Gyaseman Palace</title>
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+/* ===== HERO SECTION ===== */
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: 0.3s ease;
+    background: transparent;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+}
+
+.logo {
+    font-weight: bold;
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    position: relative;
+    padding-bottom: 5px;
+    transition: 0.3s;
+}
+
+/* Underline Effect */
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: gold;
+    left: 0;
+    bottom: 0;
+    transition: 0.3s;
+}
+
+/* On Hover */
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
+}
+
+/* SCROLL BACKGROUND */
+header.scrolled {
+    background: #101010;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+.leader-hero {
+    height: 60vh;
+    background: url("asset/img/image-8.jpeg") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: white;
+    text-align: center;
+}
+
+.leader-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+}
+
+.leader-hero h1 {
+    position: relative;
+    z-index: 2;
+    font-size: 42px;
+}
+
+/* ===== DETAILS SECTION ===== */
+.leader-details {
+    padding: 100px 8%;
+    display: flex;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.leader-info {
+    flex: 1;
+    min-width: 320px;
+}
+
+.leader-info h2 {
+    color: #800000;
+    margin-bottom: 20px;
+}
+
+.leader-info p {
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+/* ===== CAROUSEL ===== */
+.carousel-container {
+    flex: 1;
+    min-width: 320px;
+    position: relative;
+}
+
+.carousel-container img {
+    width: 100%;
+    border-radius: 12px;
+    display: none;
+}
+
+.carousel-container img.active {
+    display: block;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.6);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .leader-details {
+        flex-direction: column;
+    }
+}
+
+</style>
+</head>
+<body>
+
+<!-- ================= NAVBAR (YOUR ORIGINAL) ================= -->
+<header id="header">
+    <nav class="navbar">
+        <div class="logo">Amanokrom Gyaseman Palace</div>
+        <ul class="nav-links">
+            <li><a href="index.html#home" class="nav-link">Home</a></li>
+            <li><a href="history.html" class="nav-link">History</a></li>
+            <li><a href="index.html#culture" class="nav-link">Culture</a></li>
+            <li><a href="index.html#leadership" class="nav-link active">Leadership</a></li>
+            <li><a href="index.html#gallery" class="nav-link">Gallery</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="leader-hero">
+    <h1>Gyaseman Subchief</h1>
+</section>
+
+<!-- ================= DETAILS ================= -->
+<section class="leader-details">
+
+    <!-- CAROUSEL -->
+    <div class="carousel-container">
+        <img src="asset/img/image-13.jpeg" class="active">
+        <img src="asset/img/image-10.jpeg">
+        <img src="asset/img/image-8.jpeg">
+
+        <button class="carousel-btn prev">&#10094;</button>
+        <button class="carousel-btn next">&#10095;</button>
+    </div>
+
+    <!-- TEXT CONTENT -->
+    <div class="leader-info">
+        <h2>Role & Responsibilities</h2>
+
+        <p>
+            The Gyaseman Subchief holds a distinguished position within the
+            Amanokrom traditional hierarchy. As a senior divisional chief,
+            he supports the Omanhene in governance, administration,
+            and the protection of ancestral traditions.
+        </p>
+
+        <p>
+            He serves as a custodian of sacred regalia and oversees
+            important customary rites and ceremonial functions,
+            ensuring the continuity of royal heritage.
+        </p>
+
+        <p>
+            Through wisdom, diplomacy, and unwavering dedication,
+            the Gyaseman Subchief strengthens unity, stability,
+            and development within the Amanokrom community.
+        </p>
+
+        <a href="index.html#leadership" class="btn">Back to Leadership</a>
+    </div>
+
+</section>
+
+<!-- ================= FOOTER (YOUR ORIGINAL) ================= -->
+<footer class="palace-footer">
+
+    <div class="footer-container">
+
+        <div class="footer-logo">
+            <img src="asset/img/logo.png" alt="Palace Logo">
+        </div>
+
+        <div class="footer-links">
+            <h3>Navigation</h3>
+            <ul>
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="history.html">History</a></li>
+                <li><a href="index.html#culture">Culture</a></li>
+                <li><a href="index.html#leadership">Leadership</a></li>
+                <li><a href="index.html#gallery">Gallery</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-news">
+            <h3>Latest News</h3>
+
+            <div class="news-item">
+                <img src="asset/img/fes.jpeg" alt="">
+                <div>
+                    <p class="news-date">January 7, 2026</p>
+                    <p class="news-title">Odwira Festival Celebration</p>
+                </div>
+            </div>
+
+            <div class="news-item">
+                <img src="asset/img/NANA OSIM.jpeg" alt="">
+                <div>
+                    <p class="news-date">December 20, 2025</p>
+                    <p class="news-title">Community Development Address</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2026 Amanokrom Gyaseman Palace | All Rights Reserved
+    </div>
+
+</footer>
+
+<!-- ================= JAVASCRIPT ================= -->
+<script>
+
+/* Navbar Scroll Effect */
+const header = document.getElementById("header");
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 50) {
+        header.classList.add("scrolled");
+    } else {
+        header.classList.remove("scrolled");
+    }
+});
+
+/* Carousel */
+let slides = document.querySelectorAll(".carousel-container img");
+let current = 0;
+
+document.querySelector(".next").onclick = function() {
+    slides[current].classList.remove("active");
+    current = (current + 1) % slides.length;
+    slides[current].classList.add("active");
+};
+
+document.querySelector(".prev").onclick = function() {
+    slides[current].classList.remove("active");
+    current = (current - 1 + slides.length) % slides.length;
+    slides[current].classList.add("active");
+};
+
+</script>
+
+</body>
+</html>

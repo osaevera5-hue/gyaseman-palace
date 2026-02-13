@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>History | Amanokrom Gyaseman Palace</title>
+<link rel="stylesheet" href="style.css">
+<style>
+       header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: 0.3s ease;
+    background: transparent;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+}
+
+.logo {
+    font-weight: bold;
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    position: relative;
+    padding-bottom: 5px;
+    transition: 0.3s;
+}
+
+/* Underline Effect */
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: gold;
+    left: 0;
+    bottom: 0;
+    transition: 0.3s;
+}
+
+/* On Hover */
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
+}
+
+/* SCROLL BACKGROUND */
+header.scrolled {
+    background: #101010;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.gallery-preview {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: 0.5s ease;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 50px;
+}
+
+
+.gallery-overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    color: white;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.center-btn {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.btn {
+    background: #800000;
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: gold;
+    color: black;
+}
+
+ .history-split {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    margin-top: 60px;
+    flex-wrap: wrap;   /* Important */
+}
+
+.history-image {
+    flex: 1;
+    min-width: 300px;
+}
+
+.history-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header id="header">
+    <nav class="navbar">
+        <div class="logo">Amanokrom Gyaseman Palace</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="history.html" class="active">History</a></li>
+            <li><a href="culture.html">Culture</a></li>
+            <li><a href="index.html#leadership">Leadership</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- HERO BANNER -->
+<section class="history-hero">
+    <div class="history-overlay"></div>
+    <h1>The Royal History of Amanokrom</h1>
+</section>
+
+<!-- MAIN HISTORY CONTENT -->
+<section class="history-content">
+
+    <div class="history-intro">
+        <h2>Continuation of the History of Amanokrom</h2>
+        <p>
+            The first King of the Asona group of people 
+then at Adanse Kokobiante in Ashanti.
+The Asona of the Ahenkorakese group led 
+by Nana Agyapon Tenten first settled at 
+Adanse Ofoase and moved with Ofori 
+Panyin of Akyem Abuakwa to Pamen in 
+Eastern Akyem Abuakwa before moving 
+again with King Safori to establish the new 
+Ofori Kuma dynasty of Akuapem around 
+1733.
+Nana Kwatia Akompi led the 
+Ahenkorakesee Asona group from Pamen to 
+Akuapem where they stayed with Omanhene 
+Sated at Amanprobi near Akropong. Nana 
+Kwatia Akompi died at Amanprobi and was 
+succeeded by Nana Osim Kwatia who led the 
+Ahenkorakese Asona group to accompany 
+King Safori to move from Amanprobi to 
+Nsorem, between Akropong and Abiriw. 
+After the death of Osim Kwatia, Amanor 
+Awuah succeeded to the leadership of the 
+Ahenkorakese Asona group till about 1740.
+        </p>
+    </div>
+
+    <!-- <div class="history-split">
+           <div class="history-image">
+        <img src="asset/img/image-12.jpeg" alt="Cultural Ceremony">
+    </div>
+        
+        <div>
+            <h3>Foundation & Growth</h3>
+            <p>
+                Through generations, the palace became the heart of governance,
+                tradition, and justice. Chiefs and elders upheld ancestral
+                customs while guiding the people toward prosperity.
+            </p>
+
+            <p>
+                Festivals such as Odwira symbolized purification, renewal,
+                and communal gratitude.
+            </p>
+        </div>
+    </div> -->
+
+    <div class="history-split">
+    <div class="history-image">
+        <img src="asset/img/image-11.jpeg" alt="Cultural Ceremony">
+    </div>
+
+    <div class="history-text">
+        <!-- <h3>Foundation & Growth</h3> -->
+        <p>
+            At that time, the traditional administration 
+of Akuapem was being run by Ofei Boa as a Regent. It is reported that during an Ohum 
+festival around 1740, Nana Amanor Awuah had 
+a misunderstanding with Ofei Boa over the 
+ownership of some palm wine which resulted 
+in Nana Amanor Awuah and his people moving 
+from Akropong with the intention of returning 
+to Akim Abuakwa. Their first stop was 
+Adesaase and later Odomenase near Dodowa.
+        </p>
+        <p>
+             A professional hunter, Amanor Awuah, had 
+earlier discovered the Dodowa area as a good 
+hunting ground where he had a chance 
+meeting with a follow hunter, Konton Mensah, 
+a native of Akwamu who had taken refuge in 
+that area after the Akuapem-Akwamu vial’ of 
+1733
+        </p>
+    </div>
+</div>
+
+
+ <div class="history-split">
+    <div class="history-image">
+        <img src="asset/img/image-11.jpeg" alt="Cultural Ceremony">
+    </div>
+
+    <div class="history-text">
+        <!-- <h3>Foundation & Growth</h3> -->
+        <p>
+             The status of both Kwatia Akompi and Osim 
+Kwatia before they moved from Nsorem 
+Akropong was Omansinhene. In 1742, 
+Omanhene Fianko Betuafo (1735-1742) 
+requested Nana Awuah to come and reside on 
+the Akuapem Ridge and in compliance Nana 
+Amanor Awuah with Konton Morrah decided 
+to establish the new town of Amanokrorn. 
+Four sections of quarters were established in 
+this new township:1. Konton Bronmu, 2. 
+Poribon, 3. Aguampore and 4. Ahweren 
+Kwadwo's quarters.
+As a town established by a member of the 
+Asona clan, the stool of Amanokrom from its 
+establishments was and is still being occupied 
+by Asona descendants or Ahenkorakese with a 
+few exceptions of about five regencies till 
+today. By the time of Omanhene Kwadade I the 
+stool of Amanokrom had been occupied by a 
+succession of regents. This spate of regency 
+succession was found most unacceptable to
+        </p>
+       
+    </div>
+</div>
+
+    <!-- TIMELINE SECTION -->
+    <div class="history-timeline">
+        <h2>Royal Timeline</h2>
+
+        <div class="timeline-item">
+            <span>1700s</span>
+            <p>Establishment of Amanokrom traditional authority.</p>
+        </div>
+
+        <div class="timeline-item">
+            <span>1800s</span>
+            <p>Expansion of the palace influence and community growth.</p>
+        </div>
+
+        <div class="timeline-item">
+            <span>1900s</span>
+            <p>Preservation of cultural identity through festivals and rites.</p>
+        </div>
+
+        <div class="timeline-item">
+            <span>Present</span>
+            <p>Modern leadership blending tradition with development.</p>
+        </div>
+    </div>
+
+    <div class="center-btn">
+        <a href="index.html" class="btn">Back to Home</a>
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer class="palace-footer">
+    <div class="footer-container">
+
+        <div class="footer-logo">
+            <img src="asset/img/logo.png" alt="Palace Logo">
+        </div>
+
+        <div class="footer-links">
+            <h3>Navigation</h3>
+            <ul>
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#history">History</a></li>
+                <li><a href="index.html#culture">Culture</a></li>
+                <li><a href="index.html#leadership">Leadership</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-news">
+            <h3>Latest News</h3>
+            <div class="news-item">
+                <img src="asset/img/fes.jpeg" alt="">
+                <div>
+                    <p class="news-date">January 7, 2026</p>
+                    <p class="news-title">Odwira Festival Celebration</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2026 Amanokrom Gyaseman Palace | All Rights Reserved
+    </div>
+</footer>
+
+<script>
+const header = document.getElementById("header");
+
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 50) {
+        header.classList.add("scrolled");
+    } else {
+        header.classList.remove("scrolled");
+    }
+});
+</script>
+
+</body>
+</html>
